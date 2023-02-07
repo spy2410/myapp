@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Local API Integration</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Local API Integration Example</h1>
+  <div id="responseContainer"></div>
+
+  <script>
+    $.ajax({
+      url: "http://localhost:3000/list_movies",
+      type: "GET",
+      success: function(response) {
+        $("#responseContainer").html(response);
+      }
+    });
+  </script>
+</body>
+</html>
